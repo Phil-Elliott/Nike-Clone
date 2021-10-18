@@ -4,6 +4,8 @@
 
 body {
 	margin: 0;
+	height: 100vh; 
+	width: 100vw;
 }
 
 header {
@@ -24,6 +26,7 @@ li {
 	display: flex;
 	justify-content: space-between;
 	background: #f5f5f5;
+	width: 100vw;
 }
 
 .icons-top {
@@ -68,6 +71,7 @@ li {
 .middle {
 	display: flex;
 	justify-content: space-between;
+	width: 100vw;
 }
 
 .middle > a > img {
@@ -76,13 +80,13 @@ li {
 	margin-left: 3rem;
 }
 
-img:hover {
+.nike-img:hover {
 	opacity: .5;
 }
 
 .middle > ul {
 	display: flex;
-	margin-left: 11rem;
+	padding-left: 11rem;
 }
 
 .middle > ul > li {
@@ -149,17 +153,34 @@ img:hover {
 
 /* This is for the bottom header */
 .container1 {
+	width: 100vw;
+	height: 58px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
 	background: #f5f5f5;
-	margin-top: -.7rem;
+	position: relative;
+	overflow: hidden;
 }
 
-.container1 > p {
+.slider {
+	position: absolute;
+	display: grid;
+	grid-template-columns: 100vw 100vw 100vw;
+	right: 0;
+	transition: right 1s ease-in-out;
+}
+
+.slider > div {
+	
+}
+
+.slider > div > p {
 	font-size: 14px;
-	padding-top: .5rem;
 }
 
-.container1 > a {
+.slider > div > a {
 	font-size: 12px;
 	text-decoration: underline;
 }
