@@ -8,10 +8,6 @@ body {
 	width: 100vw;
 }
 
-header {
-
-}
-
 a {
 	text-decoration: none;
 	color: black;
@@ -58,20 +54,61 @@ li {
 	padding: 0 1rem;
 }
 
-.top > ul > li {
+.top-list {
 	margin: 0 1rem;
 	font-size: 13px; 
 }
 
-.top > ul > li:hover {
+.top-list:hover {
 	opacity: .7;
 }
+
+/* For the Help dropdown menu */
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: white;
+	z-index: 1;
+	border-radius: 5px;
+	padding: 0 0 1.5rem 1rem;
+	right: .1rem;
+	top: 1.7rem;
+	width: 15rem;
+}
+
+.dropdown-content > a {
+	margin: .5rem;
+	font-size: 15px;
+	color: grey;
+}
+
+.dropdown-content > a:hover {
+	color: black;
+}
+
+.dropdown:hover .dropdown-content {
+	display: flex; 
+	flex-direction: column;
+}
+
 
 /* This is for the middle header */
 .middle {
 	display: flex;
 	justify-content: space-between;
 	width: 100vw;
+	background-color: white;
+}
+
+/* The class for fixing the middle nav bar on scroll */
+.sticky {
+	position: fixed; 
+	top: 0;
 }
 
 .middle > a > img {
@@ -86,7 +123,7 @@ li {
 
 .middle > ul {
 	display: flex;
-	padding-left: 11rem;
+	padding-left: 14rem;
 }
 
 .middle > ul > li {
@@ -112,7 +149,7 @@ li {
 }
 
 .search:hover {
-	background: #f1f1f1;
+	background: lightgrey;
 }
 
 .search:focus {
@@ -133,22 +170,22 @@ li {
 
 .icon1-middle {
 	margin: 0 1rem;
+	padding: 5px;
 }
 
 .icon2-middle {
 	margin: 0 1rem;
+	padding: 5px;
 }
 
 .icon1-middle:hover {
 	background: lightgrey; 
 	border-radius: 200px;
-	padding: 5px;
 }
 
 .icon2-middle:hover {
 	background: lightgrey; 
 	border-radius: 200px;
-	padding: 5px;
 }
 
 /* This is for the bottom header */
@@ -189,7 +226,7 @@ li {
 	padding-bottom: .5rem;
 }
 
-/* This is first content */
+/* This is the first content */
 .content {
 	width: 1300px;
 	max-width: 100%;
@@ -208,6 +245,7 @@ li {
 	cursor: pointer;
 }
 
+/* This is the second content */
 .content2-imgs > img {
 	width: 600px;
 	margin: 1rem;
