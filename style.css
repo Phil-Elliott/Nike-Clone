@@ -67,6 +67,7 @@ li {
 .dropdown {
 	position: relative;
 	display: inline-block;
+	padding: 0 1rem;
 }
 
 .dropdown-content {
@@ -74,15 +75,19 @@ li {
 	position: absolute;
 	background-color: white;
 	z-index: 1;
+}
+
+.dropdown-help {
 	border-radius: 5px;
 	padding: 0 0 1.5rem 1rem;
 	right: .1rem;
 	top: 1.7rem;
 	width: 15rem;
+	flex-direction: column;
 }
 
 .dropdown-content > a {
-	margin: .5rem;
+	margin: .3rem;
 	font-size: 15px;
 	color: grey;
 }
@@ -93,9 +98,7 @@ li {
 
 .dropdown:hover .dropdown-content {
 	display: flex; 
-	flex-direction: column;
 }
-
 
 /* This is for the middle header */
 .middle {
@@ -123,7 +126,10 @@ li {
 
 .middle > ul {
 	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding-left: 14rem;
+	width: 100vw;
 }
 
 .middle > ul > li {
@@ -131,6 +137,33 @@ li {
 	font-size: 16px;
 }
 
+.dropdown > li > a:hover {
+	padding-bottom: 1.2rem;
+	border-bottom: 1px solid;
+}
+
+/* dropdowns for the the middle list */
+.dropdown-middle {
+	width: 100vw;
+	height: 50vh;
+	top: 2.4rem;
+	justify-content: center;
+}
+
+.dropdown-middle > ul {
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+	padding-right: 1rem;
+}
+
+.dropdown-middle > ul > a {
+	color: grey;
+	padding: .3rem;
+	font-size: 14px;
+}
+
+/* This is the right side of the middle header */
 .middle-right {
 	display: flex;
 	align-items: center;
